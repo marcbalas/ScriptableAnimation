@@ -4,9 +4,9 @@ I created **ScriptableAnimation** because I needed to integrate titles animation
 
 **ScriptableAnimation** was intended to create animations similar to what you do with video editing _Titles_.
 
-![demo1](https://github.com/marcbalas/ScriptableAnimation/demo1.gif)
+![demo1](https://github.com/marcbalas/ScriptableAnimation/blob/master/demo1.gif)
 
-![demo2](https://github.com/marcbalas/ScriptableAnimation/demo2.gif)
+![demo2](https://github.com/marcbalas/ScriptableAnimation/blob/master/demo2.gif)
 
 Tweaking all the elements can be time consuming and boring so it's better if we can tune the animation at runtime and then share it with others.
 Using scriptable objects make it possible.
