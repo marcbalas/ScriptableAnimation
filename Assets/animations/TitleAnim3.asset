@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b510da5b6344c49fab7cc6a9895a7b2a, type: 3}
+  m_Name: TitleAnim3
+  m_EditorClassIdentifier: 
+  itemNames:
+  - Yellow
+  - Title
+  - Subtitle
+  animations:
+  - animationData: {fileID: 11400000, guid: 9662d2596c3d94bbc8220ecad174a728, type: 2}
+    itemIndex: 0
+    startTime: 0
+    objectData:
+      go: {fileID: 0}
+      position: {x: 2456, y: 409.5, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      color: {r: 1, g: 0.8482758, b: 0, a: 1}
+      anchoredPosition: {x: 1000, y: 0}
+      rectPosition: {x: 2456, y: 409.5, z: 0}
+      localEulerAngles: {x: -0, y: 0, z: 0}
+  - animationData: {fileID: 11400000, guid: 092dbbdc8e3a84713bff00c59b53251e, type: 2}
+    itemIndex: 2
+    startTime: 1.5
+    objectData:
+      go: {fileID: 0}
+      position: {x: -15, y: 409.75, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      color: {r: 0.4044118, g: 0.4044118, b: 0.4044118, a: 1}
+      anchoredPosition: {x: -998, y: 0}
+      rectPosition: {x: -15, y: 409.75, z: 0}
+      localEulerAngles: {x: -0, y: 0, z: 0}
+  - animationData: {fileID: 11400000, guid: 13a23d3d2a6634ec5b3408dc6f8ee7e1, type: 2}
+    itemIndex: 1
+    startTime: 2.8
+    objectData:
+      go: {fileID: 0}
+      position: {x: 956, y: 413.55, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      anchoredPosition: {x: 0, y: -131.45001}
+      rectPosition: {x: 956, y: 413.55, z: 0}
+      localEulerAngles: {x: -0, y: 0, z: 0}

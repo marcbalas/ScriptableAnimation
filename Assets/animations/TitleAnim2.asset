@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b510da5b6344c49fab7cc6a9895a7b2a, type: 3}
+  m_Name: TitleAnim2
+  m_EditorClassIdentifier: 
+  itemNames:
+  - Title
+  - Top
+  - Bottom
+  - subtitle
+  animations:
+  - animationData: {fileID: 11400000, guid: 665aa7debe76f4ef79ab10d75bf3bc06, type: 2}
+    itemIndex: 1
+    startTime: 0
+    objectData:
+      go: {fileID: 0}
+      position: {x: 728, y: 409.5, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      color: {r: 1, g: 0.8482758, b: 0, a: 1}
+      anchoredPosition: {x: 0, y: 0}
+      rectPosition: {x: 728, y: 409.5, z: 0}
+      localEulerAngles: {x: -0, y: 0, z: 0}
+  - animationData: {fileID: 11400000, guid: 74affea3f394c4025b085f75c0a72e6f, type: 2}
+    itemIndex: 2
+    startTime: 0
+    objectData:
+      go: {fileID: 0}
+      position: {x: 728, y: 409.5, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      color: {r: 1, g: 0.8482758, b: 0, a: 1}
+      anchoredPosition: {x: 0, y: 0}
+      rectPosition: {x: 728, y: 409.5, z: 0}
+      localEulerAngles: {x: -0, y: 0, z: 0}
+  - animationData: {fileID: 11400000, guid: 13a23d3d2a6634ec5b3408dc6f8ee7e1, type: 2}
+    itemIndex: 0
+    startTime: 1.5
+    objectData:
+      go: {fileID: 0}
+      position: {x: 728, y: 334.8936, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      anchoredPosition: {x: 0, y: -167}
+      rectPosition: {x: 728, y: 334.8936, z: 0}
+      localEulerAngles: {x: -0, y: 0, z: 0}
+  - animationData: {fileID: 11400000, guid: 13a23d3d2a6634ec5b3408dc6f8ee7e1, type: 2}
+    itemIndex: 0
+    startTime: 3.5
+    objectData:
+      go: {fileID: 0}
+      position: {x: 728, y: 334.8936, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      anchoredPosition: {x: 0, y: -167}
+      rectPosition: {x: 728, y: 334.8936, z: 0}
+      localEulerAngles: {x: -0, y: 0, z: 0}
+  - animationData: {fileID: 11400000, guid: 13a23d3d2a6634ec5b3408dc6f8ee7e1, type: 2}
+    itemIndex: 3
+    startTime: 3.5
+    objectData:
+      go: {fileID: 0}
+      position: {x: 728, y: 334.8936, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      anchoredPosition: {x: 0, y: -167}
+      rectPosition: {x: 728, y: 334.8936, z: 0}
+      localEulerAngles: {x: -0, y: 0, z: 0}

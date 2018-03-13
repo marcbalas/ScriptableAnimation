@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b510da5b6344c49fab7cc6a9895a7b2a, type: 3}
+  m_Name: SequenceSetValue
+  m_EditorClassIdentifier: 
+  itemNames:
+  - Rect
+  animations:
+  - animationData: {fileID: 11400000, guid: efeabbcf64c1848d9a74ec99881a93e0, type: 2}
+    itemIndex: 0
+    startTime: 2
+    objectData:
+      go: {fileID: 0}
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      color: {r: 1, g: 0, b: 0, a: 1}
+      anchoredPosition: {x: 0, y: 0}
+      rectPosition: {x: 0, y: 0, z: 0}
+      localEulerAngles: {x: -0, y: 0, z: 0}
+  - animationData: {fileID: 11400000, guid: 02a15a8b6c1dc4d94ade0e85a17004e2, type: 2}
+    itemIndex: 0
+    startTime: 4
+    objectData:
+      go: {fileID: 0}
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      color: {r: 1, g: 0, b: 0, a: 1}
+      anchoredPosition: {x: 0, y: 0}
+      rectPosition: {x: 0, y: 0, z: 0}
+      localEulerAngles: {x: -0, y: 0, z: 0}
