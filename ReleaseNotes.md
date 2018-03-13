@@ -21,6 +21,7 @@
 # a sequence can be appended to a sequence.
 # sequence could embed a set object states  : use to override local items states on start (no need to position items)
 # support more properties
-# use reflection for generic approach ?
 # abstract visualization of sequence to be understood in one image
+# save passive objects states (masks) ? 
+# use reflection for generic approach ?
 
