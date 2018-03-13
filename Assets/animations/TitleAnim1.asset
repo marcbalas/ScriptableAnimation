@@ -23,106 +23,106 @@ MonoBehaviour:
     startTime: 0
     objectData:
       go: {fileID: 0}
-      position: {x: -99, y: 310.5, z: 0}
+      position: {x: -25, y: 409.5, z: 0}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      color: {r: 0.16176468, g: 0.16176468, b: 0.16176468, a: 1}
-      anchoredPosition: {x: -99, y: -99}
-      rectPosition: {x: -99, y: 310.5, z: 0}
+      color: {r: 1, g: 0.93103445, b: 0, a: 1}
+      anchoredPosition: {x: -25, y: 0}
+      rectPosition: {x: -25, y: 409.5, z: 0}
       localEulerAngles: {x: -0, y: 0, z: 0}
   - animationData: {fileID: 11400000, guid: a18f2239333e948599ae9a91a4937e3a, type: 2}
     itemIndex: 0
     startTime: 2
     objectData:
       go: {fileID: 0}
-      position: {x: 710, y: 416.75, z: 0}
+      position: {x: 372.80005, y: 409.5, z: 0}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       color: {r: 1, g: 1, b: 1, a: 1}
-      anchoredPosition: {x: -18, y: 7.25}
-      rectPosition: {x: 710, y: 416.75, z: 0}
+      anchoredPosition: {x: -355.2, y: 0}
+      rectPosition: {x: 372.80005, y: 409.5, z: 0}
       localEulerAngles: {x: -0, y: 0, z: 0}
   - animationData: {fileID: 11400000, guid: e668384a46d56466392e54cb8538230a, type: 2}
     itemIndex: 2
     startTime: 0.5
     objectData:
       go: {fileID: 0}
-      position: {x: 1456, y: 819, z: 0}
+      position: {x: 1814, y: 336.85, z: 0}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       color: {r: 1, g: 1, b: 1, a: 1}
-      anchoredPosition: {x: 0, y: 0}
-      rectPosition: {x: 1456, y: 819, z: 0}
+      anchoredPosition: {x: 1814, y: -72.649994}
+      rectPosition: {x: 1814, y: 336.85, z: 0}
       localEulerAngles: {x: -0, y: 0, z: 0}
   - animationData: {fileID: 11400000, guid: 71b4ce942269e43f99f9a2917dc4ace9, type: 2}
     itemIndex: 2
     startTime: 2
     objectData:
       go: {fileID: 0}
-      position: {x: 1456, y: 819, z: 0}
+      position: {x: 1814, y: 336.85, z: 0}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       color: {r: 1, g: 1, b: 1, a: 1}
-      anchoredPosition: {x: 0, y: 0}
-      rectPosition: {x: 1456, y: 819, z: 0}
+      anchoredPosition: {x: 1814, y: -72.649994}
+      rectPosition: {x: 1814, y: 336.85, z: 0}
       localEulerAngles: {x: -0, y: 0, z: 0}
   - animationData: {fileID: 11400000, guid: 80d2f3f4135c246e3a0f4b6b8ccfa4be, type: 2}
     itemIndex: 1
-    startTime: 2
+    startTime: 3
     objectData:
       go: {fileID: 0}
-      position: {x: -99, y: 310.5, z: 0}
+      position: {x: -25, y: 409.5, z: 0}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      color: {r: 0.16176468, g: 0.16176468, b: 0.16176468, a: 1}
-      anchoredPosition: {x: -99, y: -99}
-      rectPosition: {x: -99, y: 310.5, z: 0}
+      color: {r: 1, g: 0.93103445, b: 0, a: 1}
+      anchoredPosition: {x: -25, y: 0}
+      rectPosition: {x: -25, y: 409.5, z: 0}
       localEulerAngles: {x: -0, y: 0, z: 0}
   - animationData: {fileID: 11400000, guid: 8a2d5c2a781da40faa8cb4a4e5a98af9, type: 2}
     itemIndex: 3
     startTime: 4
     objectData:
       go: {fileID: 0}
-      position: {x: 710, y: 870.53796, z: 0}
+      position: {x: 422.80002, y: 878.5, z: 0}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       color: {r: 1, g: 1, b: 1, a: 1}
-      anchoredPosition: {x: 710, y: 461.038}
-      rectPosition: {x: 710, y: 870.53796, z: 0}
+      anchoredPosition: {x: 422.8, y: 469}
+      rectPosition: {x: 422.80002, y: 878.5, z: 0}
       localEulerAngles: {x: -0, y: 0, z: 0}
   - animationData: {fileID: 11400000, guid: 8a2d5c2a781da40faa8cb4a4e5a98af9, type: 2}
     itemIndex: 4
-    startTime: 2
+    startTime: 1.5
     objectData:
       go: {fileID: 0}
-      position: {x: 639.153, y: 924.53796, z: 0}
+      position: {x: 381.70004, y: 467.65, z: 0}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       color: {r: 1, g: 1, b: 1, a: 1}
-      anchoredPosition: {x: -88.847, y: 515.03796}
-      rectPosition: {x: 639.153, y: 924.53796, z: 0}
+      anchoredPosition: {x: -346.3, y: 58.15}
+      rectPosition: {x: 381.70004, y: 467.65, z: 0}
       localEulerAngles: {x: -0, y: 0, z: 0}
   - animationData: {fileID: 11400000, guid: aee86a0dca9ee4771ac711876b34b32d, type: 2}
     itemIndex: 3
     startTime: 2.5
     objectData:
       go: {fileID: 0}
-      position: {x: 710, y: 870.53796, z: 0}
+      position: {x: 422.80002, y: 878.5, z: 0}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       color: {r: 1, g: 1, b: 1, a: 1}
-      anchoredPosition: {x: 710, y: 461.038}
-      rectPosition: {x: 710, y: 870.53796, z: 0}
+      anchoredPosition: {x: 422.8, y: 469}
+      rectPosition: {x: 422.80002, y: 878.5, z: 0}
       localEulerAngles: {x: -0, y: 0, z: 0}
   - animationData: {fileID: 11400000, guid: fa9a896cb1a20440f9668d82dded7a80, type: 2}
     itemIndex: 3
     startTime: 0
     objectData:
       go: {fileID: 0}
-      position: {x: 710, y: 870.53796, z: 0}
+      position: {x: 422.80002, y: 878.5, z: 0}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       color: {r: 1, g: 1, b: 1, a: 1}
-      anchoredPosition: {x: 710, y: 461.038}
-      rectPosition: {x: 710, y: 870.53796, z: 0}
+      anchoredPosition: {x: 422.8, y: 469}
+      rectPosition: {x: 422.80002, y: 878.5, z: 0}
       localEulerAngles: {x: -0, y: 0, z: 0}
