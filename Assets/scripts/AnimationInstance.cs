@@ -33,16 +33,16 @@ public class AnimationInstance
 
     }
 
-    public void SaveState()
-    {
-        objectData.SaveState();
+    //public void SaveState()
+    //{
+    //    objectData.SaveState();
 
-    }
+    //}
 
-    public void RestoreState()
-    {
-        objectData.RestoreState();
-    }
+    //public void RestoreState()
+    //{
+    //    objectData.RestoreState();
+    //}
 
 
     public void Pause()

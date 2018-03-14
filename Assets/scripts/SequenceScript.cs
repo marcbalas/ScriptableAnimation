@@ -11,6 +11,9 @@ public class SequenceScript : ScriptableObject {
 
     public ReorderableList reorderableList;
 	public List<string> itemNames;
+
+
+    public List<ObjectStateData> embeddedStates;
     //[HideInInspector]
     public List<AnimationInstance> animations;
 

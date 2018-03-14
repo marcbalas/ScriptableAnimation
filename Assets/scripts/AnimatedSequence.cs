@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,137 +15,6 @@ public enum SequenceReplayType : int
 
 }
 
-[System.Serializable]
-public class ObjectStateData
-{
-
-    [HideInInspector]
-    public GameObject go;
-    //[HideInInspector]
-    public Vector3 position;
-    [HideInInspector]
-    public Quaternion rotation;
-    [HideInInspector]
-    public Vector3 scale;
-
-
-    [HideInInspector]
-    public Color color;
-
-
-
-    [SerializeField, HideInInspector]
-    Vector2 anchoredPosition;
-
-    [SerializeField, HideInInspector]
-    Vector3 rectPosition;
-    public Vector2 AnchoredPosition { get { return anchoredPosition; } }
-
-    public Vector3 RectPosition { get { return rectPosition; } }
-
-    [SerializeField, HideInInspector]
-    Vector3 localEulerAngles;
-    public Vector3 LocalEulerAngles { get { return localEulerAngles; } }
-
-    /// getters
-    public SpriteRenderer sprite { get { return go.GetComponent<SpriteRenderer>(); } }
-    public Image image { get { return go.GetComponent<Image>(); } }
-    public Text text { get { return go.GetComponent<Text>(); } }
-    public RectTransform rectTransform { get { return go.GetComponent<RectTransform>(); } }
-
-    //copy GO state
-
-    public ObjectStateData(GameObject gameObject)
-    {
-        go = gameObject;
-        SaveState();
-    }
-
-
-
-    public void SaveState()
-    {
-
-        position = go.transform.position;
-        rotation = go.transform.rotation;
-        scale = go.transform.localScale;
-
-        localEulerAngles = go.transform.localEulerAngles;
-
-        if (rectTransform)
-        {
-            anchoredPosition = rectTransform.anchoredPosition;
-            rectPosition = rectTransform.position;
-        }
-
-        if (text)
-        {
-
-            color = text.color;
-        }
-
-        if (image)
-        {
-            color = image.color;
-        }
-        if (sprite)
-        {
-            color = sprite.color;
-        }
-        //if it s a mesh : save material color
-        if (go.GetComponent<MeshRenderer>())
-        {
-            color = go.GetComponent<MeshRenderer>().material.color;
-
-        }
-
-    }
-
-    public void RestoreState()
-    {
-
-        if (!go)
-        {
-            //no go attached to data
-            Debug.LogWarning("no go attached to object data");
-            return;
-        }
-
-        go.transform.position = position;
-        go.transform.rotation = rotation;
-        go.transform.localScale = scale;
-        if (rectTransform)
-        {
-
-            rectTransform.anchoredPosition = anchoredPosition;
-            rectTransform.position = rectPosition;
-        }
-
-
-        if (text)
-        {
-            text.color = color;
-        }
-
-        if (image)
-        {
-            image.color = color;
-        }
-        if (sprite)
-        {
-            sprite.color = color;
-        }
-
-
-        if (go.GetComponent<MeshRenderer>())
-        {
-            go.GetComponent<MeshRenderer>().material.color = color;
-
-        }
-
-    }
-
-}
 
 
 [DisallowMultipleComponent]
@@ -156,7 +26,12 @@ public class AnimatedSequence : MonoBehaviour
     static int nbSequences = 0;
 
     public SequenceScript sequence;
+
+
     public bool fireOnStart = true;
+
+    //[HideInInspector]
+    //public bool useEmbeddedStates = false;
 
     public float startingTime = 0;
 
@@ -169,7 +44,9 @@ public class AnimatedSequence : MonoBehaviour
 
     public List<GameObject> items;
 
-    //List<ObjectStateData> itemsStateData = new List<ObjectStateData>();
+    List<ObjectStateData> itemsStateData = new List<ObjectStateData>();
+
+
 
 
     private void Awake()
@@ -198,6 +75,8 @@ public class AnimatedSequence : MonoBehaviour
 
         }
 
+      
+
 
         Reset();
     }
@@ -225,9 +104,35 @@ public class AnimatedSequence : MonoBehaviour
         ResetItems();
 
     }
+
+
+    public void ApplyEmbeddedStates()
+    {
+
+        //copy states from sequence script
+        itemsStateData = new List<ObjectStateData>(sequence.embeddedStates);
+        //restore states from to all items from list
+        //set new embedded values to gameobjects
+        RestoreItemStates();
+    }
+
     void Play()
     {
         StopAllCoroutines();
+
+        //if(useEmbeddedStates){
+
+
+        //    ApplyEmbeddedStates();
+
+        //}else{
+        //    //fill states list with current items states
+        //    SaveItemStates(); 
+        //}
+
+        SaveItemStates(); 
+        //assign state to animationInstance
+
         playing = true;
         StartCoroutine(PlayAllAnimationsCoroutine());
     }
@@ -235,6 +140,7 @@ public class AnimatedSequence : MonoBehaviour
     IEnumerator PlayAllAnimationsCoroutine()
     {
 
+        //global delay
         yield return new WaitForSeconds(startingTime);
 
 
@@ -249,7 +155,10 @@ public class AnimatedSequence : MonoBehaviour
             else
             {
                 //set the data again : cause item could have changed at runtime: BUG erase old data
+                animInstance.objectData = itemsStateData[animInstance.itemIndex];
+
                 //animInstance.objectData = new ObjectStateData(items[animInstance.itemIndex]);
+             
                 StartCoroutine(StartAnimCoroutine(animInstance));
             }
         }
@@ -308,23 +217,34 @@ public class AnimatedSequence : MonoBehaviour
         }
     }
 
+    //restore states from sequence to animInstance
     public void RestoreItemStates()
     {
-        foreach (AnimationInstance animInstance in sequence.animations)
+        foreach (ObjectStateData data in itemsStateData)
         {
-            animInstance.RestoreState();
+            
+            data.RestoreState();
 
         }
     }
 
-    //public void SaveItemStates()
-    //{
-    //    foreach (AnimationInstance animInstance in sequence.animations)
-    //    {
-    //        animInstance.SaveState();
+    //save current item states 
+    public void SaveItemStates()
+    {
 
-    //    }
-    //}
+        while (itemsStateData.Count <items.Count){
+
+            itemsStateData.Add(null);
+        }
+
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (itemsStateData[i]==null){
+                itemsStateData[i] = new ObjectStateData(items[i]);
+            }
+                itemsStateData[i].SetObject(items[i]);
+        }
+    }
 
 
     public void Pause()
